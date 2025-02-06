@@ -1,7 +1,11 @@
+import Home from "./home-page/Home";
+import Navbar from "./navbar/Navbar";
+export default function Index() {
+  return (
+    <div>
+      {/* <Navbar /> */}
+      <Home />
 
-export default function Home() {
-  return <div className="bg-[#031f39] h-[1020px]">
-    {/* <image src={bottomright} alt="bottomright" /> */}
-    <img className="h-full w-full" src="/images/bottomright.svg" alt="" />
-  </div>;
+    </div>
+  );
 }
