@@ -9,6 +9,7 @@ export default {
     extend: {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
+        bungee: ['Bungee', 'cursive'],
       },
       colors: {
         background: "var(--background)",
