@@ -33,11 +33,11 @@ function Navbarcomp() {
     ];
     function handleClick(e, item) {
         e.preventDefault();
-        console.log(loading,openSlider);
+        // console.log(loading,openSlider);
         dispatch(setopenSlider(true));
         dispatch(setsliderData(item.name));
-        console.log('The link was clicked.', item);
-        console.log('The link was clicked 2.', sliderData);
+        // console.log('The link was clicked.', item);
+        // console.log('The link was clicked 2.', sliderData);
     }
     return (
         <div className="absolute right-12 top-4 w-[35.5rem] h-[3rem] bg-[#087da8] rounded-lg text-white flex items-center justify-center gap-1">
