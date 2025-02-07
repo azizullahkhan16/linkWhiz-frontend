@@ -21,7 +21,7 @@ const Navbar = () => {
         };
     }, []);
     return (
-        <div className="relative w-full z-50">
+        <div className="fixed w-full z-50">
             {
                 isMobile ? <ResponsiveNavbar /> :
                     <div className="hidden md:block">
