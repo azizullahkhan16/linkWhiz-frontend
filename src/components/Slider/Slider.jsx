@@ -12,7 +12,7 @@ function Slider({ openSlider }) {
   function signupkholo() {
     dispatch(setopenSlider(false)); // Close the slider first
     dispatch(setsliderData("Sign Up"));
-  
+
     // Add a small delay before opening the slider to allow transition effect
     setTimeout(() => {
       dispatch(setopenSlider(true));
@@ -21,17 +21,17 @@ function Slider({ openSlider }) {
   function signinkholo() {
     dispatch(setopenSlider(false)); // Close the slider first
     dispatch(setsliderData("Sign In"));
-  
+
     // Add a small delay before opening the slider to allow transition effect
     setTimeout(() => {
       dispatch(setopenSlider(true));
     }, 300); // Adjust the delay time as needed (300ms is a good starting point)
   }
-  
+
   if (sliderData === "My URLs") {
     return (
       <div
-        className={`fixed top-0 right-0 w-[44%] h-full bg-white z-50 transform transition-transform duration-500 ${openSlider ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 w-full sm:w-[44%] h-full bg-white z-50 transform transition-transform duration-500 ${openSlider ? "translate-x-0" : "translate-x-full"
           }`}
       >
         {/* Cross Button */}
@@ -52,7 +52,7 @@ function Slider({ openSlider }) {
   } else if (sliderData === "Sign Up") {
     return (
       <div
-        className={`fixed top-0 right-0 w-[35%] h-full bg-white z-50 transform transition-transform duration-500 ${openSlider ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 w-full sm:w-[35%] h-full bg-white z-50 transform transition-transform duration-500 ${openSlider ? "translate-x-0" : "translate-x-full"
           }`}
       >
         {/* Cross Button */}
@@ -130,7 +130,7 @@ function Slider({ openSlider }) {
   else if (sliderData === "Sign In") {
     return (
       <div
-        className={`fixed top-0 right-0 w-[35%] h-full bg-white z-50 transform transition-transform duration-500 ${openSlider ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 w-full sm:w-[35%] h-full bg-white z-50 transform transition-transform duration-500 ${openSlider ? "translate-x-0" : "translate-x-full"
           }`}
       >
         {/* Cross Button */}
