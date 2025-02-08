@@ -51,7 +51,7 @@ function ResponsiveNavbar() {
                   toggleMenu();
                   openSidebar(button);
                 }}
-                className="block w-full text-center py-3 px-6 text-lg font-semibold text-white bg-[#087da8] rounded-lg transition-all duration-300 hover:bg-blue-500 hover:scale-105"
+                className="block w-full font-montserrat text-center py-3 px-6 text-lg font-semibold text-white bg-[#084074] rounded-lg transition-all duration-300 hover:bg-blue-500 hover:scale-105"
               >
                 {button.name}
               </button>

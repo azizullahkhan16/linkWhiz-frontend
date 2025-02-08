@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import Homecomponent from "@/components/Homecomponent";
+import Homecomponent from "@/components/Hero/Homecomponent";
 import Navbar from "../navbar/Navbar";
 import { useSelector } from "react-redux";
 import Slider from "@/components/Slider/Slider";
-
+import Main from "@/components/Main/Main";
 const Home = () => {
   const { loading, openSlider } = useSelector((state) => state.allCart);
 
@@ -18,6 +18,7 @@ const Home = () => {
   return (
     <div className="relative">
       <Navbar />
+      <Main />
       <Slider openSlider={openSlider} />
 
       {/* Blur overlay when openSlider is true */}
@@ -28,6 +29,7 @@ const Home = () => {
       {/* Background Content */}
       <div className="scroll-smooth bg-[#031f39] h-[1020px] relative z-10">
         <Homecomponent />
+        
       </div>
     </div>
   );
