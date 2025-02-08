@@ -1,3 +1,12 @@
-export default function Home() {
-  return <div>Welcome, Abdullah</div>;
+
+import Home from "./home-page/Home";
+import Navbar from "./navbar/Navbar";
+export default function Index() {
+  return (
+    <div>
+      {/* <Navbar /> */}
+      <Home />
+
+    </div>
+  );
 }
