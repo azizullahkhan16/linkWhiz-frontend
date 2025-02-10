@@ -2,7 +2,7 @@ import LoadingToTick from "../Loader/LoadingToTick"
 
 function Main() {
     return (
-        <div className="absolute top-[100px]  w-full grid grid-cols-1 md:grid-cols-2 z-20">
+        <div className="absolute top-[130px]  w-full grid grid-cols-1 md:grid-cols-2 z-20">
             <div className="flex justify-center ">
                 <div className="bg-[#F8F8F8] flex flex-col p-6 rounded-2xl shadow-lg sm:w-[400px] md:w-[500px] max-w-[90%] h-[468px] ">
                     <div className="flex justify-start items-center mb-6 w-[100%] ">

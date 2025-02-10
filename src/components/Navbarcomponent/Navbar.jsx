@@ -21,7 +21,7 @@ const Navbar = () => {
     }, []);
     return (
         <div className="fixed w-full h-[80px] bg-[#031f39] z-50">
-            <img src="/images/topleft.svg" alt="" />
+            <img className="absolute" src="/images/topleft.svg" alt="" />
             {
                 isMobile ? <ResponsiveNavbar /> :
                     <div className="hidden md:block">
