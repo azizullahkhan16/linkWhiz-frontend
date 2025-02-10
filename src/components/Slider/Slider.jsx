@@ -1,14 +1,23 @@
+import { useState,useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setopenSlider, setshowloader, setsliderData } from "@/redux/slices/urlslice";
 import { useSelector } from "react-redux";
 import { SocialIcon } from 'react-social-icons'
-function Slider({ openSlider }) {
-  const { loading, sliderData } = useSelector(state => state.allCart);
+function Slider() {
+  const { openSlider,loading, sliderData } = useSelector(state => state.allCart);
+  const [animate, setAnimate] = useState(false);
   const dispatch = useDispatch();
   function handleClick(e) {
     e.preventDefault();
     dispatch(setopenSlider(false));
   }
+  useEffect(() => {
+    if (openSlider) {
+      setTimeout(() => setAnimate(true), 10); // Small delay for animation
+    } else {
+      setAnimate(false);
+    }
+  }, [openSlider]);
   function signupkholo() {
     dispatch(setopenSlider(false)); // Close the slider first
     dispatch(setsliderData("Sign Up"));
@@ -31,7 +40,7 @@ function Slider({ openSlider }) {
   if (sliderData === "My URLs") {
     return (
       <div
-        className={`fixed top-0 right-0 w-full sm:w-[44%] h-full bg-white z-50 transform transition-transform duration-500 ${openSlider ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 w-full sm:w-[44%] h-full bg-white z-50 transform transition-transform duration-500 ${animate ? "translate-x-0" : "translate-x-full"
           }`}
       >
         {/* Cross Button */}
@@ -52,7 +61,7 @@ function Slider({ openSlider }) {
   } else if (sliderData === "Sign Up") {
     return (
       <div
-        className={`fixed top-0 right-0 w-full sm:w-[35%] h-full bg-white z-50 transform transition-transform duration-500 ${openSlider ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 w-full sm:w-[35%] h-full bg-white z-50 transform transition-transform duration-500 ${animate ? "translate-x-0" : "translate-x-full"
           }`}
       >
         {/* Cross Button */}
@@ -130,7 +139,7 @@ function Slider({ openSlider }) {
   else if (sliderData === "Sign In") {
     return (
       <div
-        className={`fixed top-0 right-0 w-full sm:w-[35%] h-full bg-white z-50 transform transition-transform duration-500 ${openSlider ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 w-full sm:w-[35%] h-full bg-white z-50 transform transition-transform duration-500 ${animate ? "translate-x-0" : "translate-x-full"
           }`}
       >
         {/* Cross Button */}

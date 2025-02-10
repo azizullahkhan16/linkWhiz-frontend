@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbarcomponent/Navbar";
 import { useSelector } from "react-redux";
 import Slider from "@/components/Slider/Slider";
 import Main from "@/components/Main/Main";
+import Footer from "@/components/footer/Footer";
 const Home = () => {
   const { loading, openSlider } = useSelector((state) => state.allCart);
 
@@ -31,6 +32,7 @@ const Home = () => {
         <Homecomponent />
         
       </div>
+      <Footer />
     </div>
   );
 };
