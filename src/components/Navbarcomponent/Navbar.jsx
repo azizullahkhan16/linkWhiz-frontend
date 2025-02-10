@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useEffect,useState } from "react";
 import Navbarcomp from "@/components/Navbarcomponent/Navbarcomp";
 import Navbarcomp2 from "@/components/Navbarcomponent/Navbarcomp2";
@@ -21,7 +20,8 @@ const Navbar = () => {
         };
     }, []);
     return (
-        <div className="fixed w-full z-50">
+        <div className="fixed w-full h-[80px] bg-[#031f39] z-50">
+            <img src="/images/topleft.svg" alt="" />
             {
                 isMobile ? <ResponsiveNavbar /> :
                     <div className="hidden md:block">
@@ -30,7 +30,6 @@ const Navbar = () => {
                         <Navbarcomp />
                     </div>
             }
-
         </div>
     );
 };

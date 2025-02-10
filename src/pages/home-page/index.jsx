@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Homecomponent from "@/components/Hero/Homecomponent";
-import Navbar from "../navbar/Navbar";
+import Navbar from "../../components/Navbarcomponent/Navbar";
 import { useSelector } from "react-redux";
 import Slider from "@/components/Slider/Slider";
 import Main from "@/components/Main/Main";
