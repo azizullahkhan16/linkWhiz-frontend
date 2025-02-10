@@ -1,10 +1,11 @@
 import {useState,useEffect, use} from "react";
 import { useSelector,useDispatch } from "react-redux";
 import { setopenSlider,setshowloader,setsliderData } from "@/redux/slices/urlslice";
-
+import { useRouter } from "next/router";
 function Navbarcomp() {
     const {loading,openSlider,sliderData} = useSelector(state => state.allCart);
     const dispatch = useDispatch();
+    const router = useRouter();
     const buttons = [
         {
             name: "My URLs",
@@ -34,6 +35,10 @@ function Navbarcomp() {
     function handleClick(e, item) {
         e.preventDefault();
         // console.log(loading,openSlider);
+        if(item.name === "Plans"){
+            router.push('/plans');
+            return;
+        }
         dispatch(setopenSlider(true));
         dispatch(setsliderData(item.name));
         // console.log('The link was clicked.', item);
