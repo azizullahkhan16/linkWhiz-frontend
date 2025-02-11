@@ -39,6 +39,10 @@ function Navbarcomp() {
             router.push('/plans');
             return;
         }
+        if(item.name === "My URLs"){
+            router.push('/Myurls');
+            return;
+        }
         if((sliderData != "My URLs" || sliderData != "Sign Up" || sliderData != "Sign In") && (item.name === "My URLs" || item.name === "Sign Up" || item.name === "Sign In") ){
             router.push('/home-page');
         }
