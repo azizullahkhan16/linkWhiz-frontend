@@ -10,6 +10,7 @@ export default {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
         bungee: ['Bungee', 'cursive'],
+        proxima: ['Proxima Nova', 'sans-serif'],
       },
       keyframes: {
         'circle-rotate': {
